@@ -1,0 +1,127 @@
+/*
+* BOF booking calendar styles
+*/
+
+.booking-calendar {
+    box-sizing: border-box;
+}
+
+/* previous month arrow in the header of the calendar */
+.booking-calendar-prev-month {
+    float: left;
+    height: 34px;
+    top: 0;
+    padding-top: 8px;
+}
+
+/* container for dropdown with month selector */
+.booking-calendar-month-selector-cont {
+    float: left;
+    margin-left: 20px;
+}
+
+/* next month arrow in the header of the calendar */
+.booking-calendar-next-month {
+    float: right;
+    height: 34px;
+    top: 0;
+    padding-top: 8px;
+}
+
+/* days of week styling */
+.booking-calendar-header {
+    float: left;
+    text-align: right;
+    font-weight: bold;
+    color: black;
+    height: 30px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* common style for calendar day */
+.booking-calendar-day {
+    float: left;
+    padding-right: 4px;
+    border-top: 3px solid #ddd;
+    color: #b4b4b4;
+    margin: 1px 2px;
+}
+
+/* calendar day which is available */
+.booking-calendar-day.available {
+   /* background-color: #7CFF7F; */
+   background-color: #fff;
+}
+
+/* calendar day which is not available */
+.booking-calendar-day.not-available {
+    background-color: rgba(255,85,91,0.15);
+    border-top: 3px solid #FF5459 !important;
+    color: #ff5459 !important;
+    cursor: pointer;
+}
+
+/* calendar day which relies to the current month */
+.booking-calendar-day.current-month {
+    color: #444;
+    border-top: 3px solid #999;
+}
+
+/* calendar day which represents today */
+.booking-calendar-day.current-day {
+    background-color: rgba(66,139,202,0.15);
+    border-top: 3px solid rgb(66,139,202);
+    color: rgb(66,139,202);
+
+}
+
+/* calendar day which represents today and available; selector not working for me, tried to make it to show current day which is available in light green */
+.booking-calendar-day.current-day.avalible {
+    background-color: #B2FFCD;
+}
+
+/* calendar day which represents today and not available; selector not working for me, tried to make it to show current day which is not available in light red */
+.booking-calendar-day.current-day.not-available {
+	background-color: rgba(66,139,202,0.15);
+	border-top-color: #ff5459;
+	color: #ff5459;
+
+}
+
+.booking-calendar-day.not-available.hover[class*="booking-calendar-booking-"] {
+    background-color: rgba(255,85,91,0.30);
+}
+
+.booking-calendar-day.current-day.not-available.hover[class*="booking-calendar-booking-"] {
+    background-color: rgba(66,139,202,0.30);
+}
+
+/* calendar day which is hovered */
+.booking-calendar-day.hover {
+    background-color: #f5f5f5;
+}
+
+/* calendar day which relies inside selection after clicking one of the days first */
+.booking-calendar-day.active {
+    background-color: #f5f5f5;
+}
+
+/* day of month inside calendar day */
+.booking-calendar-day-number {
+    text-align: right;
+    height: 20px;
+}
+
+/* price inside calendar day */
+.booking-calendar-day-price {
+    text-align: right;
+    position: relative;
+    height: 20px;
+    top: 36px !important;
+}
+/*
+* EOF booking calendar styles
+*/
